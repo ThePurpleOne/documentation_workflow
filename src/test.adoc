@@ -1,0 +1,101 @@
+= Document Template
+Stirnemann J.
+:reproducible:
+:listing-caption: Listing
+:source-highlighter: coderay
+//:source-highlighter: highlightjs
+// https://highlightjs.org/
+//:highlightjs-theme: railscasts 
+:icons: font
+:numbered:
+:table-caption: Data Set
+:toc: left
+:title-page:
+:stem: latexmath
+:stylesheet: template.css
+
+== Random Subtitles
+=== Random Subsubtitle
+[.text-justify]
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus mi vitae nunc convallis finibus. Maecenas at pretium nulla, et maximus nibh. Morbi ultricies suscipit arcu nec pretium. Nullam volutpat purus ex, sit amet mattis nisi consequat ut. Cras vulputate eu urna eu porttitor. Pellentesque imperdiet, augue id ullamcorper tincidunt, tellus massa efficitur ipsum, id lacinia mauris eros faucibus lectus. In consectetur dignissim sapien, ut tempus nunc hendrerit vitae. Vivamus posuere tempus tincidunt. Duis mi lorem, malesuada nec erat nec, varius feugiat diam. Mauris aliquam nisi a libero varius, non ultrices magna laoreet. In pulvinar ligula ac massa pulvinar, eget.
+
+=== Random second Subsubtitle
+[.text-justify]
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus mi vitae nunc convallis finibus. Maecenas at pretium nulla, et maximus nibh. Morbi ultricies suscipit arcu nec pretium. Nullam volutpat purus ex, sit amet mattis nisi consequat ut. Cras vulputate eu urna eu porttitor. Pellentesque imperdiet, augue id ullamcorper tincidunt, tellus massa efficitur ipsum, id lacinia mauris eros faucibus lectus. In consectetur dignissim sapien, ut tempus nunc hendrerit vitae. Vivamus posuere tempus tincidunt. Duis mi lorem, malesuada nec erat nec, varius feugiat diam. Mauris aliquam nisi a libero varius, non ultrices magna laoreet. In pulvinar ligula ac massa pulvinar, eget.
+
+[quote, Albert Einstein]
+A person who never made a mistake never tried anything new.
+
+== Testing some code
+.Recursive fibonacci sequence
+```C
+int fibbonacci(int n)
+{
+	if(n == 0{return 0;} 
+	else if(n == 1) {return 1;} 
+	else{return (fibbonacci(n-1) + fibbonacci(n-2));}
+}
+```
+
+[source,c, linenums, highlight=2..4]
+.Recursive factorial with line numbers and highlighting
+int factorial(int n)
+{
+	if(n == 0){return 1;} 
+	else {return n * factorial(n-1);}
+}
+
+== Some Maths formulas
+[latexmath]
+++++
+	\frac{45^{15}}{\sqrt[4]{17}}
+++++
+
+== Testing an image
+.Here is a picture of the most handsome boy ever
+image::graham.jpg[]
+
+== Testing list
+[square]
+* item 1
+* item 2
+* item 3
+
+== Testing table
+[grid="rows",format="csv"]
+[options="header",cols="^,<,<s,<,>m"]
+|===========================
+ID,FName,LName,Address,Phone
+1,Vasya,Pupkin,London,+123
+2,X,Y,"A,B",45678
+|===========================
+
+== There is the labelled list
+https://docs.asciidoctor.org/asciidoc/latest/lists/description/[Source of the description list]
+
+CPU:: The brain of the computer.
+Hard drive:: Permanent storage for operating system and/or user files.
+RAM:: Temporarily stores information the CPU uses during operation.
+Keyboard:: Used to enter text or control items on the screen.
+Mouse:: Used to point to and select items on your computer screen.
+Monitor:: Displays information in visual form using text and graphics.
+List in list::
+* Item 1
+* Item 2
+
+== Thats's a link
+http://www.google.com[Google] footnote:[This is a footnote displayed at the end of the page]
+
+== Some Admonitions 
+[TIP]
+This is a tip
+
+[NOTE]
+[.text-justify]
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus mi vitae nunc convallis finibus. Maecenas at pretium nulla, et maximus nibh. Morbi ultricies suscipit arcu nec pretium. Nullam volutpat purus ex, sit amet mattis nisi consequat ut. Cras vulputate eu urna eu porttitor. Pellentesque imperdiet, augue id ullamcorper tincidunt, tellus massa efficitur ipsum, id lacinia mauris eros faucibus lectus. In consectetur dignissim sapien, ut tempus nunc hendrerit vitae. Vivamus posuere tempus tincidunt. Duis mi lorem, malesuada nec erat nec, varius feugiat diam. Mauris aliquam nisi a libero varius, non ultrices magna laoreet. In pulvinar ligula ac massa pulvinar, eget.
+
+IMPORTANT: This is an important note
+
+CAUTION: This is a caution
+
+WARNING: This is a warning

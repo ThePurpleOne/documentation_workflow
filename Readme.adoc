@@ -1,0 +1,52 @@
+# Documentation Workflow
+This is a simple workflow for documenting anything in asciidoc format.
+Works on windows and linux.
+You'll only need Docker and a folder on your computer with your asciidoc file(s).
+I use a custom theme in ./src/template.css, you can totally modify it to make it your own.
+
+== How to use
+STEP 1::
+Clone the repo to your computer. 
+[source,bash]
+git clone git@github.com:ThePurpleOne/documentation_workflow.git
+
+
+STEP 2::
+Follow the steps to install Docker from https://www.docker.com/
+
+STEP 3::
+Build the Docker container (You have to be in the directory with the Dockerfile)
+-t tells docker to tag the image with a simpler name
+[source,bash]
+docker build . -t asciidoc_documentation
+
+STEP 4::
+Now you need to run the container.
+--rm - tells docker to remove the container after it's done.
+-v   - tells docker to mount the folder H:\DOCKER (from host computer) that contains the asciidoc file(s) to the container's /data (In the container)
+Mounting the host directory into the container allow us to work on the file from the host computer and acess it from the container.
+[source,bash]
+docker container run --rm -it -v "H:\DOCKER:/data" asciidoc_documentation
+
+You can now open and modify the asciidoc file (contained in H:\DOCKER) in your editor.
+
+STEP 5::
+When you want your file to be outputed in html
+[source,bash]
+asciidoctor test.adoc -o test.html
+
+== Preview
+.Preview of some paragraphs
+image::./ressources/paragraphs.png[]
+
+.Preview of some code
+image::./ressources/code.png[]
+
+.Preview of a list
+image::./ressources/lists.png[]
+
+.Preview of some notes
+image::./ressources/Notes.png[]
+
+.Preview of some tables
+image::./ressources/tabs.png[]
