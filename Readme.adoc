@@ -47,7 +47,7 @@ image::./ressources/code.png[]
 image::./ressources/lists.png[]
 
 .Preview of some notes
-image::./ressources/Notes.png[]
+image::./ressources/notes.png[]
 
 .Preview of some tables
 image::./ressources/tabs.png[]
