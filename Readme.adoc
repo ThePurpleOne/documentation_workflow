@@ -35,19 +35,3 @@ You can now open and modify the asciidoc file (contained in H:\DOCKER) in your e
 When you want your file to be outputed in html
 [source,bash]
 asciidoctor test.adoc -o test.html
-
-== Preview
-.Preview of some paragraphs
-image::./ressources/paragraphs.png[]
-
-.Preview of some code
-image::./ressources/code.png[]
-
-.Preview of a list
-image::./ressources/lists.png[]
-
-.Preview of some notes
-image::./ressources/notes.png[]
-
-.Preview of some tables
-image::./ressources/tabs.png[]
